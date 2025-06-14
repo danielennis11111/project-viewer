@@ -1,136 +1,107 @@
-# AI Project Hub - Frontend Prototype
+# AI Project Hub - Prototype
 
-A React + Tailwind CSS prototype for an AI project sharing platform that allows team members to discover and access AI fine-tuning projects shared with them.
+A modern, responsive web application for sharing and managing AI fine-tuning projects within teams. Built with React, Tailwind CSS, and React Router.
 
-## Features
+## 🚀 Live Demo
 
-### 🎯 Project Listing
-- **Responsive Grid Layout**: Displays projects in a responsive grid (1 column on mobile, 2 on tablet, 3 on desktop)
-- **Advanced Filtering**: Search by project name, description, category, or shared by
-- **Category Filtering**: Filter projects by AI categories (Sentiment Analysis, Text Generation, etc.)
-- **Flexible Sorting**: Sort by date shared (newest/oldest) or project name (A-Z/Z-A)
-- **Favorites System**: Heart icon to mark/unmark projects as favorites
-- **Empty State**: Helpful messaging when no projects match filters
+**[View Live Demo](https://danielennis11111.github.io/project-viewer)**
 
-### 📋 Project Detail View
-- **Comprehensive Information**: Detailed project descriptions and metadata
-- **API Access**: Copy-to-clipboard API endpoints with usage examples
-- **Performance Metrics**: Visual display of model accuracy, precision, recall, F1-score
-- **Fine-tuning Parameters**: Complete parameter specifications in an organized layout
-- **Data Sources**: Clickable links to training datasets
-- **Usage Guidelines**: Detailed instructions, best practices, and limitations
+## ✨ Features
 
-### 🎨 Design Features
-- **Modern UI**: Clean, professional design using Tailwind CSS
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Interactive Elements**: Hover effects, transitions, and intuitive user interactions
-- **Accessibility**: Proper ARIA labels and keyboard navigation support
-- **Professional Typography**: Clear hierarchy and readable text
+- **Project Listing**: Browse AI projects with responsive grid/list views
+- **Advanced Filtering**: Search by name, description, tags, category, and status
+- **Project Details**: Comprehensive project information including:
+  - Fine-tuning parameters and performance metrics
+  - API endpoints and usage guidelines
+  - Technical specifications and data sources
+- **Modern UI**: Clean, professional interface built with Tailwind CSS
+- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
+- **Navigation**: React Router for smooth page transitions
+- **Favorites**: Mark and filter favorite projects
 
-## Technology Stack
+## 🛠️ Technology Stack
 
-- **Frontend**: React 19 with functional components and hooks
-- **Styling**: Tailwind CSS for utility-first styling
-- **Icons**: Heroicons for consistent iconography
-- **State Management**: React useState and useMemo for local state
-- **Data**: Mock data embedded in components (no backend required)
+- **Frontend**: React 18, JavaScript (JSX)
+- **Styling**: Tailwind CSS
+- **Routing**: React Router v6
+- **Icons**: Heroicons
+- **Deployment**: GitHub Pages with GitHub Actions
 
-## Getting Started
+## 📱 Sample Data
 
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
+The prototype includes 10 realistic AI projects across various domains:
+- Customer Sentiment Analysis
+- Legal Document Summarization
+- Medical Image Classification
+- Multilingual Customer Support Chatbot
+- Financial Fraud Detection
+- E-commerce Product Image Generator
+- Code Review Assistant
+- Supply Chain Demand Forecasting
+- Autonomous Vehicle Object Detection
+- Social Media Content Moderation
 
-### Installation & Running
+## 🚀 Automatic Deployment
 
-**⚠️ IMPORTANT: This is a frontend-only prototype. Run from the `client` directory, NOT the root directory.**
+This project is configured for automatic deployment to GitHub Pages:
+- Every push to `main` branch triggers a new deployment
+- GitHub Actions builds and deploys the React application
+- Live site updates automatically within minutes
 
-1. Navigate to the client directory:
-   ```bash
-   cd client
-   ```
+## 💻 Local Development
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+To run this project locally:
 
-3. Start the development server:
-   ```bash
-   npm start
-   ```
-
-4. Open your browser to `http://localhost:3000`
-
-### ❌ Common Mistake
-**DO NOT** run `npm start` from the root directory - this will try to start the old server which is not needed for this prototype.
-
-**✅ Correct way:**
 ```bash
+# Clone the repository
+git clone https://github.com/danielennis11111/project-viewer.git
+cd project-viewer
+
+# Install dependencies
 cd client
+npm install
+
+# Start development server
 npm start
 ```
 
-**❌ Wrong way:**
-```bash
-npm start  # This tries to start the server from root directory
-```
+The application will open at `http://localhost:3000`
 
-## Project Structure
+## 📁 Project Structure
 
 ```
-client/src/
-├── components/
-│   ├── ProjectListing.jsx    # Main project listing with filters
-│   ├── ProjectCard.jsx       # Individual project card component
-│   ├── ProjectDetail.jsx     # Detailed project view
-│   └── Navbar.jsx           # Simple navigation component
-├── App.jsx                  # Main app component with view switching
-├── index.css               # Tailwind CSS imports and base styles
-└── index.js               # React app entry point
+project-viewer/
+├── client/                 # React frontend application
+│   ├── src/
+│   │   ├── components/     # React components
+│   │   │   ├── ProjectListing.jsx
+│   │   │   ├── ProjectCard.jsx
+│   │   │   ├── ProjectDetail.jsx
+│   │   │   └── Navbar.jsx
+│   │   ├── App.jsx         # Main app component
+│   │   └── index.js        # Entry point
+│   ├── public/             # Static assets
+│   └── package.json        # Dependencies and scripts
+├── .github/workflows/      # GitHub Actions
+│   └── deploy.yml          # Deployment workflow
+└── README.md
 ```
 
-## Sample Data
+## 🎯 Use Cases
 
-The prototype includes 6 sample AI projects covering different categories:
-- Sentiment Analysis Model
-- Text Summarization Engine  
-- Medical Image Classifier
-- Financial Fraud Detection
-- Customer Support Chatbot
-- E-commerce Image Generator
+This prototype demonstrates a platform for:
+- **AI Teams**: Share fine-tuned models within organizations
+- **Research Groups**: Collaborate on AI projects and experiments
+- **Enterprise**: Manage AI model deployments and documentation
+- **Education**: Showcase AI projects and learning resources
 
-Each project includes realistic metadata, performance metrics, and usage guidelines.
+## 🔄 Continuous Deployment
 
-## Prototype Features
-
-- **View Switching**: Toggle between Project Listing and Project Detail views
-- **No Backend Required**: All data is embedded in the frontend
-- **Fully Interactive**: All UI elements are functional (search, filter, sort, favorites)
-- **Production-Ready Styling**: Professional appearance suitable for stakeholder demos
-
-## Future Enhancements
-
-- React Router for proper navigation
-- Backend API integration
-- User authentication
-- Real-time collaboration features
-- Advanced filtering options
-- Project creation and editing
-- Team management
-- Notification system
-
-## Development Notes
-
-This is a frontend-only prototype designed for design iteration and stakeholder feedback. The focus is on UI/UX rather than backend functionality. All interactions work as expected, but data is not persisted between sessions.
-
-## Browser Support
-
-- Chrome (recommended)
-- Firefox
-- Safari
-- Edge
+The project uses GitHub Actions for CI/CD:
+- Builds React application on every push
+- Deploys to GitHub Pages automatically
+- Monitors build status and deployment health
 
 ---
 
-Built with ❤️ using React and Tailwind CSS 
+**Built with ❤️ for AI project collaboration** 
