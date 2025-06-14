@@ -1,0 +1,22 @@
+{
+  "name": "viewer-test-app-mab",
+  "version": "1.0.0",
+  "description": "AI Project Hub platform",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd client && npm install && cd ../server && npm install",
+    "start": "npm run server",
+    "server": "cd server && npm run server",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd server && npm run build && cd ../client && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
